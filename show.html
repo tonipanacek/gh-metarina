@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Metarina components</title>
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/7998b48984.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+</head>
+<body>
+  <div class="h-screen flex overflow-hidden bg-white">
+
+    <div class="flex flex-col w-0 flex-1 overflow-hidden">
+      <!-- top navbar -->
+      <div class="relative z-10 flex-shrink-0 flex h-16 bg-white shadow">
+        <div class="flex-1 px-4 flex justify-between">
+          <div class="flex-1 flex">
+            <form class="w-full flex md:ml-0" action="#" method="GET">
+              <label for="search_field" class="sr-only">Search</label>
+              <div class="relative w-full text-gray-400 focus-within:text-gray-600">
+                <div class="absolute inset-y-0 left-0 flex items-center pointer-events-none">
+                  <!-- Heroicon name: search -->
+                  <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd" />
+                  </svg>
+                </div>
+                <input id="search_field" class="block w-full h-full pl-8 pr-3 py-2 border-transparent text-gray-900 placeholder-gray-500 focus:outline-none focus:placeholder-gray-400 focus:ring-0 focus:border-transparent sm:text-sm" placeholder="Search" type="search" name="search">
+              </div>
+            </form>
+          </div>
+          <div class="ml-4 flex items-center md:ml-6">
+            <button class="bg-white p-1 rounded-full text-gray-400 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              <span class="sr-only">View notifications</span>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9" />
+              </svg>
+            </button>
+            <!-- Profile dropdown -->
+            <div class="ml-3 relative">
+              <div>
+                <button class="max-w-xs bg-white flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" id="user-menu" aria-haspopup="true">
+                  <span class="sr-only">Open user menu</span>
+                  <img class="h-8 w-8 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- main section -->
+      <main class="flex-1 relative overflow-y-auto focus:outline-none" tabindex="0">
+        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
+          <!-- Your content should go here -->
+            <div class="relative">
+              <img src="https://res.cloudinary.com/dzvurrjbc/image/upload/v1606915566/pexels-j%C3%A9shoots-9617_uenum4.jpg" alt=""
+                class="w-full object-cover h-80 mx-auto rounded-lg ">
+              <i class="far fa-heart absolute top-4 right-4 text-white text-2xl"></i>
+              <p class="text-xs text-white absolute bottom-4 left-4 p-2 rounded-xl" style="backdrop-filter:blur(40px);background:rgba(211,211,211,47%)">
+                41° 22’ 34’’ N, 2° 11’ 13’’ E • 0,8 km away
+              </p>
+            </div>
+              <div class="flex justify-between flex-wrap pt-8">
+                <div class="flex-shrink w-full md:w-2/3 md:pr-16 lg:pr-24 mb-4">
+                  <div class="flex items-center justify-between">
+                    <h1 class="text-black font-semibold text-3xl">Sobre Port de Sitges-Aiguadolc </h1>
+                    <div class="ml-2 flex-shrink-0 flex">
+                      <p class="px-2 inline-flex text-xs leading-9 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                        Category
+                      </p>
+                    </div>
+                  </div>
+                  <h4 class="text-gray-500 py-2"><span>Barcelona, Spain</span> - <span> Costa Barcelona</span></h4>
+                  <!-- about section -->
+
+                  <!--
+                    This example requires Tailwind CSS v2.0+
+
+                    This example requires some changes to your config:
+
+                    ```
+                    // tailwind.config.js
+                    module.exports = {
+                      // ...
+                      plugins: [
+                        // ...
+                        require('@tailwindcss/line-clamp'),
+                      ]
+                    }
+                    ```
+                  -->
+                  <!-- start of marina details -->
+                  <div class="flow-root mt-6">
+                    <ul class="-my-5 divide-y divide-gray-200">
+                      <li class="py-5">
+                        <div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+                          <h3 class="text-sm font-semibold text-gray-800">
+                              <span class="absolute inset-0" aria-hidden="true"></span>
+                              <i class="fas fa-arrows-alt-h text-gray-400"></i>
+                               Berth Details
+                          </h3>
+                          <p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                            80m max. LOA & 7m max. Draft
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="py-5">
+                        <div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+                          <h3 class="text-sm font-semibold text-gray-800">
+                              <span class="absolute inset-0" aria-hidden="true"></span>
+                              <i class="fas fa-mobile text-white border-gray-300 border-2 font-bold rounded"></i>
+                              VHF channel
+                          </h3>
+                          <p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                            73 VHF / Radio
+                          </p>
+                        </div>
+                      </li>
+
+                      <li class="py-5">
+                        <div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
+                          <h3 class="text-sm font-semibold text-gray-800">
+                              <span class="absolute inset-0" aria-hidden="true"></span>
+                              Check-in Times
+                          </h3>
+                          <p class="mt-1 text-sm text-gray-600 line-clamp-2">
+                            Check yourself in with the lockbox.
+                          </p>
+                        </div>
+                      </li>
+                    </ul>
+                    <p class="my-5 text-sm text-gray-900">Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. Las tarifas incluyen agua y luz dependiendo de la eslora. No incluyen IVA ni tasas. El puerto deportivo de Aiguadolç cuenta con los servicios y beneficios de una moderna instalación portuaria. Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. Las tarifas incluyen agua y luz dependiendo de la eslora. No incluyen IVA ni tasas. El puerto deportivo de Aiguadolç cuenta con los servicios y beneficios de una moderna instalación portuaria. Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. </p>
+                  </div>
+                  <!-- "continue" line divider -->
+                  <div class="relative">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                      <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                      <span class="px-2 bg-white text-sm text-gray-500">
+                        Continue
+                      </span>
+                    </div>
+                  </div>
+
+                  <!-- facilities section -->
+                  <div class="py-8">
+                    <h3 class="text-xl text-gray-900 font-semibold pb-2">Facilities</h3>
+                    <div class="relative grid gap-6  px-5 py-6 sm:gap-8 sm:p-8 sm:grid-cols-2">
+                        <div class="-m-5 p-3 flex items-center rounded-lg">
+                          <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-green-400 text-white sm:h-12 sm:w-12">
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                            </svg>
+                          </div>
+                          <div class="ml-4">
+                            <p class="text-base font-medium text-gray-900">
+                              Analytics
+                            </p>
+                          </div>
+                        </div>
+
+                      <div class="-m-5 p-3 flex items-center rounded-lg">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-green-400 text-white sm:h-12 sm:w-12">
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122" />
+                          </svg>
+                        </div>
+                        <div class="ml-4">
+                          <p class="text-base font-medium text-gray-900">
+                            Engagement
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="-m-5 p-3 flex items-center rounded-lg">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-green-400 text-white sm:h-12 sm:w-12">
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                          </svg>
+                        </div>
+                        <div class="ml-4">
+                          <p class="text-base font-medium text-gray-900">
+                            Security
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="-m-5 p-3 flex items-center rounded-lg">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-green-400 text-white sm:h-12 sm:w-12">
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
+                          </svg>
+                        </div>
+                        <div class="ml-4">
+                          <p class="text-base font-medium text-gray-900">
+                            Integrations
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="-m-5 p-3 flex items-center rounded-lg">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-green-400 text-white sm:h-12 sm:w-12">
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                          </svg>
+                        </div>
+                        <div class="ml-4">
+                          <p class="text-base font-medium text-gray-900">
+                            Automations
+                          </p>
+                        </div>
+                      </div>
+
+                      <div class="-m-5 p-3 flex items-center rounded-lg">
+                        <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 rounded-md bg-green-400 text-white sm:h-12 sm:w-12">
+                          <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                          </svg>
+                        </div>
+                        <div class="ml-4">
+                          <p class="text-base font-medium text-gray-900">
+                            Reports
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- start calendar section -->
+                  <div class="border-t-2 border-gray-200 py-8">
+                    <h3 class="text-xl text-gray-900 font-semibold pb-2">Select checkout date</h3>
+                    <p class="text-xs">Minimum stay: 3 nights</p>
+                    <br>
+                    <p class="">TODO: put nice JS calendar here</p>
+                  </div>
+
+                  <!-- start weather api section -->
+                  <div class="border-t-2 border-gray-200 py-8">
+                    <h3 class="text-xl text-gray-900 font-semibold pb-2">Weather</h3>
+                    <p class="">TODO: fetch weather api info here</p>
+                  </div>
+                <!-- end of left side sections -->
+                </div>
+
+                <!-- start of right side (sticky) section -->
+                <div class="flex-grow w-full md:w-1/3 pb-4">
+                  <div class="sticky top-4">
+                    <!-- start of booking box -->
+                    <div class="hidden md:block bg-white overflow-hidden shadow-lg rounded-lg">
+                      <div class="px-4 md:p-6 flex flex-col justify-between h-auto md:h-56">
+                        <div class="flex justify-between items-center md:mb-8">
+                          <p class="text-gray-400"><span class="font-bold text-2xl text-black">44</span><span class="font-bold text-black">€</span> / night</p>
+                          <ul class="flex flex-row">
+                            <li class="px-0.5 text-yellow-500"><i class="fas fa-star"></i></li>
+                            <li class="px-0.5 text-yellow-500"><i class="fas fa-star"></i></li>
+                            <li class="px-0.5 text-yellow-500"><i class="fas fa-star"></i></li>
+                            <li class="px-0.5 text-yellow-500"><i class="fas fa-star"></i></li>
+                            <li class="px-0.5 text-yellow-500"><i class="fas fa-star"></i></li>
+                          </ul>
+                        </div>
+                        <form action="">
+                          <div class="mt-1 flex rounded-md shadow-sm">
+                          <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm w-24">
+                            Check in
+                          </span>
+                          <input type="date" name="check_in" id="check_in" class="focus:ring-green-400 focus:border-green-400 flex-1 block border w-full px-3 py-2 rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Add date">
+                        </div>
+                        <div class="mt-1 flex rounded-md shadow-sm">
+                          <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm w-24">
+                            Check out
+                          </span>
+                          <input type="date" name="check_out" id="check_out" class="focus:ring-green-400 focus:border-green-400 flex-1 block w-full px-3 py-2 rounded-none rounded-r-md sm:text-sm border border-gray-300" placeholder="Add date">
+                        </div>
+                        </form>
+                        <p class="text-xs text-right font-medium text-gray-500">
+                          You won't be charged yet
+                        </p>
+                      </div>
+                      <div class="bg-gray-50 px-4 py-4 sm:px-6">
+                        <!-- Content goes here -->
+                        <div class="flex flex-wrap items-center justify-between">
+                          <div class="flex items-center">
+                            <img class="inline-block h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+                            <div class="ml-3">
+                              <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                                Tom
+                              </p>
+                              <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                                Harbourmaster
+                              </p>
+                            </div>
+                          </div>
+                          <button type="button" class="inline-flex items-center justify-around px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-green-400 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:mt-2 sm:text-center md:w-full lg:w-auto">
+                            Check Availability
+                          </button>
+                        </div>
+                        <!-- We use less vertical padding on card footers at all sizes than on headers or body sections -->
+                      </div>
+                    </div>
+                    <!-- start of "terms & conditions" div -->
+                    <div class="bg-white overflow-hidden border border-gray-200 rounded-lg mt-6">
+                      <div class="px-4 py-5 sm:p-6">
+                        <a href="#">
+                          Terms & conditions of respective marina
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+               <!-- hardcoded map embed for now -->
+               <div class="border-t-2 border-gray-200 py-8">
+                  <h3 class="text-xl text-gray-900 font-semibold pb-4">Marina Approach Map</h3>
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24002.81706035945!2d1.7859531601651428!3d41.235886923798006!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a3804720b208fb%3A0x7061f1fb2907c8f9!2s08870%20Sitges%2C%20Barcelona%2C%20Spain!5e0!3m2!1sen!2sde!4v1612876994949!5m2!1sen!2sde" width="100%" height="450" frameborder="0" class="w-full" style="border:0;"allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+               </div>
+
+               <!-- Things to know section -->
+
+               <div class="border-t-2 border-gray-200 py-8">
+                 <h3 class="text-xl text-gray-900 font-semibold pb-2">Things to know</h3>
+                 <div class="max-w-7xl mx-auto flex px-4 py-6 sm:px-6 lg:px-8">
+                   <div>
+                     <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                       Company
+                     </h3>
+                     <ul class="mt-5 space-y-6">
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/information-circle -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                           </svg>
+                           <span class="ml-4">About</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/office-building -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
+                           </svg>
+                           <span class="ml-4">Customers</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/newspaper -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                           </svg>
+                           <span class="ml-4">Press</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/briefcase -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-4">Careers</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/shield-check -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                           </svg>
+                           <span class="ml-4">Privacy</span>
+                         </a>
+                       </li>
+                     </ul>
+                   </div>
+                   <div>
+                     <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                       Resources
+                     </h3>
+                     <ul class="mt-5 space-y-6">
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/user-group -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                           </svg>
+                           <span class="ml-4">Community</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/globe-alt -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                           </svg>
+                           <span class="ml-4">Partners</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/bookmark-alt -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-4">Guides</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/desktop-computer -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-4">Webinars</span>
+                         </a>
+                       </li>
+                     </ul>
+                   </div>
+                   <div>
+                     <h3 class="text-sm font-medium tracking-wide text-gray-500 uppercase">
+                       Resources
+                     </h3>
+                     <ul class="mt-5 space-y-6">
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/user-group -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
+                           </svg>
+                           <span class="ml-4">Community</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/globe-alt -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
+                           </svg>
+                           <span class="ml-4">Partners</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/bookmark-alt -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-4">Guides</span>
+                         </a>
+                       </li>
+
+                       <li class="flow-root">
+                         <a href="#" class="-m-3 p-3 flex items-center rounded-md text-base font-medium text-gray-900 hover:bg-gray-50 transition ease-in-out duration-150">
+                           <!-- Heroicon name: outline/desktop-computer -->
+                           <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                           </svg>
+                           <span class="ml-4">Webinars</span>
+                         </a>
+                       </li>
+                     </ul>
+                   </div>
+                 </div>
+               </div>
+
+
+               <!-- FAQS section -->
+               <div class="border-t-2 border-gray-200">
+                 <div class="max-w-7xl mx-auto py-16 lg:py-20">
+                   <div class="lg:grid lg:grid-cols-3 lg:gap-8">
+                     <div>
+                       <h2 class="text-xl font-semibold text-gray-900">
+                         Frequently asked questions
+                       </h2>
+                       <p class="mt-4 text-md text-gray-500">
+                        Can’t find the answer you’re looking for? Reach out to our <a href="#" class="font-medium text-indigo-600 hover:text-indigo-500">customer support</a> team.
+                        <br><br>
+                        To do: make the answers expand/collapse
+                      </p>
+                     </div>
+                     <div class="mt-12 lg:mt-0 lg:col-span-2">
+                      <dl class="space-y-12">
+                        <div class="pt-0">
+                          <dt class="text-lg">
+                            <!-- Expand/collapse question button -->
+                            <button class="text-left w-full flex justify-between items-start text-gray-400">
+                              <span class="font-medium text-gray-900">
+                                What&#039;s the best thing about Switzerland?
+                              </span>
+                              <span class="ml-6 h-7 flex items-center">
+
+                                <svg class="-rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </span>
+                            </button>
+                          </dt>
+                          <dd class="mt-2 pr-12">
+                            <p class="text-base text-gray-500">
+                              I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                            </p>
+                          </dd>
+                        </div>
+
+                        <div class="pt-6">
+                          <dt class="text-lg">
+                            <!-- Expand/collapse question button -->
+                            <button class="text-left w-full flex justify-between items-start text-gray-400">
+                              <span class="font-medium text-gray-900">
+                                How do you make holy water?
+                              </span>
+                              <span class="ml-6 h-7 flex items-center">
+
+                                <svg class="-rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </span>
+                            </button>
+                          </dt>
+                          <dd class="mt-2 pr-12">
+                            <p class="text-base text-gray-500">
+                              You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam aut tempora vitae odio inventore fuga aliquam nostrum quod porro. Delectus quia facere id sequi expedita natus.
+                            </p>
+                          </dd>
+                        </div>
+
+                        <div class="pt-6">
+                          <dt class="text-lg">
+                            <button class="text-left w-full flex justify-between items-start text-gray-400">
+                              <span class="font-medium text-gray-900">
+                                What do you call someone with no body and no nose?
+                              </span>
+                              <span class="ml-6 h-7 flex items-center">
+
+                                <svg class="-rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </span>
+                            </button>
+                          </dt>
+                          <dd class="mt-2 pr-12">
+                            <p class="text-base text-gray-500">
+                              Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa, voluptas ipsa quia excepturi, quibusdam natus exercitationem sapiente tempore labore voluptatem.
+                            </p>
+                          </dd>
+                        </div>
+
+                        <div class="pt-6">
+                          <dt class="text-lg">
+                            <!-- Expand/collapse question button -->
+                            <button class="text-left w-full flex justify-between items-start text-gray-400">
+                              <span class="font-medium text-gray-900">
+                                Why do you never see elephants hiding in trees?
+                              </span>
+                              <span class="ml-6 h-7 flex items-center">
+
+                                <svg class="-rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </span>
+                            </button>
+                          </dt>
+                          <dd class="mt-2 pr-12">
+                            <p class="text-base text-gray-500">
+                              Because they&#039;re so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                            </p>
+                          </dd>
+                        </div>
+
+                        <div class="pt-6">
+                          <dt class="text-lg">
+                            <!-- Expand/collapse question button -->
+                            <button class="text-left w-full flex justify-between items-start text-gray-400">
+                              <span class="font-medium text-gray-900">
+                                Why can&#039;t you hear a pterodactyl go to the bathroom?
+                              </span>
+                              <span class="ml-6 h-7 flex items-center">
+
+                                <svg class="-rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </span>
+                            </button>
+                          </dt>
+                          <dd class="mt-2 pr-12">
+                            <p class="text-base text-gray-500">
+                              Because the pee is silent. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, quas voluptatibus ex culpa ipsum, aspernatur blanditiis fugiat ullam magnam suscipit deserunt illum natus facilis atque vero consequatur! Quisquam, debitis error.
+                            </p>
+                          </dd>
+                        </div>
+
+                        <div class="pt-6">
+                          <dt class="text-lg">
+                            <!-- Expand/collapse question button -->
+                            <button class="text-left w-full flex justify-between items-start text-gray-400">
+                              <span class="font-medium text-gray-900">
+                                Why did the invisible man turn down the job offer?
+                              </span>
+                              <span class="ml-6 h-7 flex items-center">
+
+                                <svg class="-rotate-180 h-6 w-6 transform" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                                </svg>
+                              </span>
+                            </button>
+                          </dt>
+                          <dd class="mt-2 pr-12">
+                            <p class="text-base text-gray-500">
+                              He couldn&#039;t see himself doing it. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eveniet perspiciatis officiis corrupti tenetur. Temporibus ut voluptatibus, perferendis sed unde rerum deserunt eius.
+                            </p>
+                          </dd>
+                        </div>
+                      </dl>
+                       <!-- <dl class="space-y-12">
+                         <div>
+                           <dt class="text-lg leading-6 text-gray-900">
+                             How do you make holy water?
+                           </dt>
+                           <dd class="mt-2 text-base text-gray-500">
+                             You boil the hell out of it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                           </dd>
+                         </div>
+
+                         <div>
+                           <dt class="text-lg leading-6 text-gray-900">
+                             What&#039;s the best thing about Switzerland?
+                           </dt>
+                           <dd class="mt-2 text-base text-gray-500">
+                             I don&#039;t know, but the flag is a big plus. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                           </dd>
+                         </div>
+
+                         <div>
+                           <dt class="text-lg leading-6 text-gray-900">
+                             What do you call someone with no body and no nose?
+                           </dt>
+                           <dd class="mt-2 text-base text-gray-500">
+                             Nobody knows. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                           </dd>
+                         </div>
+
+                         <div>
+                           <dt class="text-lg leading-6 text-gray-900">
+                             Why do you never see elephants hiding in trees?
+                           </dt>
+                           <dd class="mt-2 text-base text-gray-500">
+                             Because they&#039;re so good at it. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cupiditate laboriosam fugiat.
+                           </dd>
+                         </div>
+                       </dl> -->
+                     </div>
+                   </div>
+                 </div>
+               </div>
+          <!-- /End replace -->
+        </div>
+      </main>
+      <!-- mobile booking form -->
+        <div class="md:hidden bg-white border overflow-hidden shadow-lg rounded-lg sticky bottom-4 mx-4">
+          <div class="bg-gray-50 px-4 py-4 sm:px-6">
+           <div class="flex flex-wrap items-center justify-between">
+             <div class="flex items-center">
+               <img class="inline-block h-9 w-9 rounded-full" src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="">
+               <div class="ml-3">
+                 <p class="text-sm font-medium text-gray-700 group-hover:text-gray-900">
+                   Tom
+                 </p>
+                 <p class="text-xs font-medium text-gray-500 group-hover:text-gray-700">
+                   Harbourmaster
+                 </p>
+               </div>
+             </div>
+             <button type="button" class="inline-flex items-center justify-around px-2.5 py-1.5 border border-transparent text-xs font-medium rounded shadow-sm text-white bg-green-400 hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 sm:mt-2 sm:text-center md:w-full lg:w-auto">
+               Check Availability
+             </button>
+           </div>
+         </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
