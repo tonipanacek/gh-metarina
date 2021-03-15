@@ -50,27 +50,29 @@
 
       <!-- main section -->
       <main class="flex-1 relative overflow-y-auto focus:outline-none" tabindex="0">
-        <div class="max-w-6xl mx-auto py-6 px-4 sm:px-6 md:px-8">
+        <div class="max-w-7xl mx-auto p-4 pb-0 sm:px-4 md:px-8">
             <div class="relative">
               <!-- replace with marina banner image -->
               <img src="https://res.cloudinary.com/dzvurrjbc/image/upload/v1606915566/pexels-j%C3%A9shoots-9617_uenum4.jpg" alt=""
-                class="w-full object-cover h-80 mx-auto rounded-lg ">
+                class="w-full object-cover h-80 mx-auto rounded-lg">
               <i class="far fa-heart absolute top-4 right-4 text-white text-2xl"></i>
-              <p class="text-xs text-white absolute bottom-4 left-4 p-2 rounded-xl" style="backdrop-filter:blur(40px);background:rgba(211,211,211,47%)">
+              <p class="text-xs text-white absolute bottom-4 left-4 p-2 rounded-lg" style="backdrop-filter:blur(40px);background:rgba(211,211,211,47%)">
                 41° 22’ 34’’ N, 2° 11’ 13’’ E • 0,8 km away
               </p>
             </div>
               <div class="flex justify-between flex-wrap pt-8">
                 <div class="flex-shrink w-full md:w-2/3 md:pr-16 lg:pr-24 mb-4">
-                  <div class="flex items-center justify-between">
-                    <h1 class="text-black font-semibold text-3xl">Sobre Port de Sitges-Aiguadolc </h1>
-                    <div class="ml-2 flex-shrink-0 flex">
-                      <p class="px-2 inline-flex text-xs leading-9 font-semibold rounded-full bg-yellow-100 text-yellow-800">
-                        Category
-                      </p>
+                  <div class="pb-3 border-b border-gray-300">
+                    <div class="flex items-center justify-between">
+                      <h1 class="text-black font-semibold text-3xl">Sobre Port de Sitges-Aiguadolc </h1>
+                      <div class="ml-2 flex-shrink-0 flex">
+                        <p class="px-2 inline-flex text-xs leading-9 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                          Category
+                        </p>
+                      </div>
                     </div>
+                    <h4 class="text-gray-500 py-2"><span>Barcelona, Spain</span> - <span> Costa Barcelona</span></h4>
                   </div>
-                  <h4 class="text-gray-500 py-2"><span>Barcelona, Spain</span> - <span> Costa Barcelona</span></h4>
                   <!-- about section -->
 
                   <!--
@@ -90,57 +92,35 @@
                     ```
                   -->
                   <!-- start of marina details -->
-                  <div class="flow-root mt-6">
-                    <ul class="-my-5 divide-y divide-gray-200">
-                      <li class="py-5">
-                        <div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
-                          <div class="-m-5 p-3 flex items-center rounded-lg">
-                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 bg-white text-white sm:h-12 sm:w-12">
-                              <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1612876453/IMG_1BECA4C1B26A-1_2_s8ai3k.png" alt="icon">
-                            </div>
-                            <p class="text-base font-medium text-gray-900">
-                              Berth Details
-                            </p>
-                          </div>
-                          <p class="mt-1 text-sm text-gray-600 line-clamp-2">
-                            80m max. LOA & 7m max. Draft
-                          </p>
+                  <!-- This example requires Tailwind CSS v2.0+ -->
+                  <div class="flow-root mt-3">
+                    <ul>
+                      <li class="py-4 flex">
+                        <img class="h-10 w-10" src="https://res.cloudinary.com/tonipanoche/image/upload/v1615838983/ferry-boat_lulbae.png" alt="icon">
+                        <div class="ml-5">
+                          <p class="text-base font-medium text-gray-900">Berth Details</p>
+                          <p class="text-sm text-gray-500">80m max. LOA & 7m max. Draft</p>
                         </div>
                       </li>
 
-                      <li class="py-5">
-                        <div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
-                          <div class="-m-5 p-3 flex items-center rounded-lg">
-                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 bg-white text-white sm:h-12 sm:w-12">
-                              <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1612876453/IMG_1BECA4C1B26A-1_2_s8ai3k.png" alt="icon">
-                            </div>
-                            <p class="text-base font-medium text-gray-900">
-                              VHF Channel
-                            </p>
-                          </div>
-                          <p class="mt-1 text-sm text-gray-600 line-clamp-2">
-                            73 VHF / Radio
-                          </p>
+                      <li class="py-4 flex">
+                        <img class="h-10 w-10" src="https://res.cloudinary.com/tonipanoche/image/upload/v1615838984/radio_1_fnbogv.png" alt="icon">
+                        <div class="ml-5">
+                          <p class="text-base font-medium text-gray-900">VHF Channel</p>
+                          <p class="text-sm text-gray-500">73 VHF / Radio</p>
                         </div>
                       </li>
 
-                      <li class="py-5">
-                        <div class="relative focus-within:ring-2 focus-within:ring-indigo-500">
-                          <div class="-m-5 p-3 flex items-center rounded-lg">
-                            <div class="flex-shrink-0 flex items-center justify-center h-10 w-10 bg-white text-white sm:h-12 sm:w-12">
-                              <img src="https://res.cloudinary.com/tonipanoche/image/upload/v1612876453/IMG_1BECA4C1B26A-1_2_s8ai3k.png" alt="icon">
-                            </div>
-                            <p class="text-base font-medium text-gray-900">
-                              Check-in Times
-                            </p>
-                          </div>
-                          <p class="mt-1 text-sm text-gray-600 line-clamp-2">
-                            Check yourself in with the lockbox.
-                          </p>
+                      <li class="py-4 flex">
+                        <img class="h-10 w-10" src="https://res.cloudinary.com/tonipanoche/image/upload/v1615838984/check-in_anawoe.png" alt="icon">
+                        <div class="ml-5">
+                          <p class="text-base font-medium text-gray-900">Check-in Times</p>
+                          <p class="text-sm text-gray-500">Check yourself in with the lockbox.</p>
                         </div>
                       </li>
                     </ul>
-                    <p class="my-5 text-sm text-gray-900 line-clamp-4">Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. Las tarifas incluyen agua y luz dependiendo de la eslora. No incluyen IVA ni tasas. El puerto deportivo de Aiguadolç cuenta con los servicios y beneficios de una moderna instalación portuaria. Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. Las tarifas incluyen agua y luz dependiendo de la eslora. No incluyen IVA ni tasas. El puerto deportivo de Aiguadolç cuenta con los servicios y beneficios de una moderna instalación portuaria. Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. </p>
+
+                    <p class="my-5 text-sm leading-7 text-gray-900 line-clamp-4">Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. Las tarifas incluyen agua y luz dependiendo de la eslora. No incluyen IVA ni tasas. El puerto deportivo de Aiguadolç cuenta con los servicios y beneficios de una moderna instalación portuaria. Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. Las tarifas incluyen agua y luz dependiendo de la eslora. No incluyen IVA ni tasas. El puerto deportivo de Aiguadolç cuenta con los servicios y beneficios de una moderna instalación portuaria. Amarres de 6 a 32 m. Calado Bocana 3 m. Calado interior de 2 a 4 m. Muelle de espera de hasta 30 m. </p>
                   </div>
                   <!-- "continue" line divider -->
                   <div class="relative">
@@ -270,18 +250,18 @@
                           </ul>
                         </div>
                         <form action="">
-                          <div class="mt-1 flex rounded-md shadow-sm">
-                          <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm w-24">
-                            Check in
-                          </span>
-                          <input type="date" name="check_in" id="check_in" class="focus:ring-green-400 focus:border-green-400 flex-1 block border w-full px-3 py-2 rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Add date">
-                        </div>
-                        <div class="mt-1 flex rounded-md shadow-sm">
-                          <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm w-24">
-                            Check out
-                          </span>
-                          <input type="date" name="check_out" id="check_out" class="focus:ring-green-400 focus:border-green-400 flex-1 block w-full px-3 py-2 rounded-none rounded-r-md sm:text-sm border border-gray-300" placeholder="Add date">
-                        </div>
+                          <div class="mt-1 flex rounded-lg shadow-sm">
+                            <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm w-24">
+                              Check in
+                            </span>
+                            <input type="date" name="check_in" id="check_in" class="focus:ring-green-400 focus:border-green-400 flex-1 block border w-full px-3 py-2 rounded-none rounded-r-md sm:text-sm border-gray-300" placeholder="Add date">
+                          </div>
+                          <div class="mt-1 flex rounded-lg shadow-sm">
+                            <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm w-24">
+                              Check out
+                            </span>
+                            <input type="date" name="check_out" id="check_out" class="focus:ring-green-400 focus:border-green-400 flex-1 block w-full px-3 py-2 rounded-none rounded-r-md sm:text-sm border border-gray-300" placeholder="Add date">
+                          </div>
                         </form>
                         <p class="text-xs text-right font-medium text-gray-500">
                           You won't be charged yet
@@ -338,7 +318,7 @@
                      </h3>
                      <ul class="mt-5 space-y-6">
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                            </svg>
@@ -347,7 +327,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
                            </svg>
@@ -356,7 +336,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
                            </svg>
@@ -365,7 +345,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                            </svg>
@@ -374,7 +354,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                            </svg>
@@ -389,7 +369,7 @@
                      </h3>
                      <ul class="mt-5 space-y-6">
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                            </svg>
@@ -398,7 +378,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                            </svg>
@@ -407,7 +387,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                            </svg>
@@ -416,7 +396,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                            </svg>
@@ -431,7 +411,7 @@
                      </h3>
                      <ul class="mt-5 space-y-6">
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
                            </svg>
@@ -440,7 +420,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
                            </svg>
@@ -449,7 +429,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4v12l-4-2-4 2V4M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                            </svg>
@@ -458,7 +438,7 @@
                        </li>
 
                        <li class="flow-root">
-                         <div class="-m-3 p-3 flex items-center rounded-md text-md font-medium text-gray-900">
+                         <div class="-m-3 p-3 flex items-center rounded-lg text-md font-medium text-gray-900">
                            <svg class="flex-shrink-0 h-6 w-6 text-gray-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                            </svg>
